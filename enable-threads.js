@@ -38,6 +38,7 @@ if(typeof window === 'undefined') {
       const headers = new Headers(r.headers);
       headers.set("Cross-Origin-Embedder-Policy", "require-corp"); // or: require-corp
       headers.set("Cross-Origin-Opener-Policy", "same-origin");
+      headers.set("Content-Security-Policy", "default-src cautious-computing-machine-4jjwpvvgvp27xwr-8888.app.github.dev");
       
       return new Response(r.body, { status: r.status, statusText: r.statusText, headers });
     }
